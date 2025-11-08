@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fliffy Collector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'fliffy-bg': '#F0F4F8',
+              'fliffy-bg-dark': '#E1E8F0',
+              'fliffy-panel': '#FFFFFF',
+              'fliffy-primary': '#6366F1',
+              'fliffy-secondary': '#EC4899',
+              'fliffy-accent': '#F59E0B',
+              'fliffy-text': '#1F2937',
+              'fliffy-text-light': '#6B7280',
+            },
+            fontFamily: {
+              sans: ['Nunito', 'sans-serif'],
+            },
+             animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'pop-in': 'popIn 0.3s ease-out',
+              'glow': 'glow 2s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-8px)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+               popIn: {
+                '0%': { transform: 'scale(0.7)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              glow: {
+                '0%, 100%': { boxShadow: '0 0 5px #F59E0B, 0 0 10px #F59E0B' },
+                '50%': { boxShadow: '0 0 20px #F59E0B, 0 0 30px #F59E0B' },
+              }
+            },
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-fliffy-bg text-fliffy-text font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
